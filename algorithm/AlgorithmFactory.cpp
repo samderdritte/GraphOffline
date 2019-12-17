@@ -12,6 +12,7 @@
 #include "EulerianPath.h"
 #include "MaxFlowPushRelabel.h"
 #include "HamiltonianLoop.h"
+#include "MaxClique.h"
 
 IAlgorithm* AlgorithmFactory::CreateAlgorithm(const char* name, const IGraph* pGraph) const
 {
@@ -172,6 +173,12 @@ IAlgorithm* AlgorithmFactory::_CreateAlgorithm(IndexType index, bool bFloat) con
         case 6:
         {
             res = new HamiltonianLoop(true);
+            break;
+        }
+
+        case 7:
+        {
+            res = new MaxClique();
             break;
         }
     }
