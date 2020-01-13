@@ -37,7 +37,8 @@ public:
     virtual IndexType GetResultCount() const override;
     // Get result of index. Algorithms can have complex result.
     virtual AlgorithmResult GetResult(IndexType index) const override;
-
+    // convert the adjacency list from nested vectors to double pointer array
+    virtual bool** ConvertAdjacencyMatrix(const std::vector<std::vector<bool>> &adjacencyMatrix);
 
 private:
 
